@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<div class="ct">
+	<div class="header"><a href="/">HOME</a></div>
+		<h2>Here are the awesome quotes!</h2>
+		<% if (quote) { %>
+			<% for(var i=0; i < quote.length; i++) {%>
+  		<p class="q">-- <%= quote[i].quote %>--</p>
+			<p class="by">by: <%= quote[i].name %> | at <%= quote[i].created_at %></p>
+			<hr>
+			<% } %>
+			<% }else{ %>
+			<p>No post available yet! add one!</p>
+			<% } %>
+	</div>
+</body>
+</html>
