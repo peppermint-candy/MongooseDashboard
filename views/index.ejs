@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title></title>
+</head>
+<body>
+	<div class="ct">
+		<h2>Welcome to Otter world!</h2>
+		<table>
+			<thead>
+				<th>Our Otter friends</th>
+				<th>Type</th>
+				<th>Age</th>
+				<th>favourite food</th>
+				<th>Information</th>
+			</thead>
+			<tbody>
+				<tr>
+				<% for(var i=0; i < otter.length; i++) {%>
+  			 	<td><%= otter[i].name %></td>
+					<td><%= otter[i].type %></td>
+					<td><%= otter[i].age %></td>
+					<td><%= otter[i].food %></td>
+					<td>
+						<a href="/otters/<%= otter[i].id %>">About me</a> |
+						<a href="/otters/<%= otter[i].id %>/edit">Edit info</a> |
+						<form class="delete" action="/otters/<%= otter[i].id %>/delete" method="post">
+							<input type="submit" value="Delete" class="delete">
+						</form>
+					</td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+		<p>Add more otter to the family <a href="/otters/new">here!</a></p>
+	</div>
+</body>
+</html>

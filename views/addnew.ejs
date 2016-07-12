@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/style.css">	
+	<title>MongooseDashboard</title>
+</head>
+<body>
+	
+	<div class="ct">
+	<div class="header"><a href="/">Home</a></div>
+		<h2>Add your new otter friends here!</h2>
+		<form action="/otters" method="post">
+			<label>Name:</label>
+			<input type="text" name="name"><br><br>
+			<label>Type:</label>
+			<select name="type">
+				<option value="affrican">Affrican Clawless Otter</option>
+				<option value="european">European Otter</option>
+				<option value="giant">Giant Otter</option>
+				<option value="northern">Northern River Otter</option>
+			</select><br><br>
+			<label>Favorite food:</label>
+			<input type="text" name="food"><br><br>
+			<label>Age:</label>
+			<input type="text" name="age"><br><br>
+			<input type="submit" value="Add">
+		</form>
+	</div>
+</body>
+</html>
